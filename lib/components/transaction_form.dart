@@ -6,16 +6,37 @@ import 'adaptative_date_picker.dart';
 class TransactionForm extends StatefulWidget {
   final void Function(String, double, DateTime) onSubmti;
 
-  TransactionForm(this.onSubmti);
+  TransactionForm(this.onSubmti) {}
 
   @override
-  _TransactionFormState createState() => _TransactionFormState();
+  _TransactionFormState createState() {
+    return _TransactionFormState();
+  }
 }
 
 class _TransactionFormState extends State<TransactionForm> {
   final _titleController = TextEditingController();
   final _valueController = TextEditingController();
   DateTime _selectedDate = DateTime.now();
+
+  _TransactionFormState() {
+    
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didUpdateWidget(Widget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   _submitForm() {
     final title = _titleController.text;
